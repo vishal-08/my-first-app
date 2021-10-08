@@ -1,23 +1,18 @@
 
-<!-- <input type="text" class="form-control" (input) = "onUpdateServerName($event)">   PASSING DATA USING EVENT BINDING 
+<!-- <input type="text" class="form-control" (input) = "onUpdateServerName($event)">   PASSING DATA USING EVENT BINDING  -->
 <input type="text" class="form-control" [(ngModel)] = "serverName"> <br>
 
 
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
     Add Servers</button>      <!--Property Binding && Event Binding --> 
 
-<!-- <p>{{onServerCreation}}</p>
+<p *ngIf="serverCreated; else noServer">server {{serverName}} added successfully</p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
 
 <app-server></app-server>
-<app-server></app-server> --> 
+<app-server></app-server>
 
 
 
-<input type="text" class="form-control"   [disabled] = "!allowInputTag"   [(ngModel)] = "name"> <br> <hr>
-
-<button class="btn btn-primary">Submit</button>
-
-<button class="btn btn-success m-4" (click) = "enableInput()" >Enable</button>
-
-
-<p>{{name}}</p>
