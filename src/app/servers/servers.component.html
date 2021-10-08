@@ -1,3 +1,8 @@
+
+<input type="text" class="form-control" (input) = "onUpdateServerName($event)">   <!-- PASSING DATA USING EVENT BINDING  -->
+
+<p>{{ serverName }}</p>
+
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
     Add Servers</button>      <!--Property Binding && Event Binding -->
 
@@ -5,3 +10,6 @@
 
 <app-server></app-server>
 <app-server></app-server>
+
+
+
