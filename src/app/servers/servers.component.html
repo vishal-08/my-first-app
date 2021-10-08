@@ -1,10 +1,10 @@
 
 <!-- <input type="text" class="form-control" (input) = "onUpdateServerName($event)">   PASSING DATA USING EVENT BINDING  -->
-<input type="text" class="form-control" [(ngModel)] = "serverName"> 
-<p>{{ serverName }}</p>
+<input type="text" class="form-control" [(ngModel)] = "serverName"> <br>
+
 
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
-    Add Servers</button>      <!--Property Binding && Event Binding -->
+    Add Servers</button>      <!--Property Binding && Event Binding --> 
 
 <p>{{onServerCreation}}</p>
 
