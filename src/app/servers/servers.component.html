@@ -19,6 +19,6 @@
 <Button class="btn btn-primary" (click)="toggleDisplay()">Show Details</Button>
 
 <p *ngIf="showDetail">Secret password = $$$123</p>
-<div *ngFor="let logItem of log" 
-[ngStyle]="{backgroundColor : logItem>=5 ? 'red' : 'transparent'}" 
-[ngClass]="{'log-el' : logItem>=5}">{{logItem}}</div>
+<div *ngFor="let logItem of log; let i = index"
+[ngStyle]="{backgroundColor : i>=5 ? 'red' : 'transparent'}" 
+[ngClass]="{'log-el' : i>=5}">{{logItem}}</div>
