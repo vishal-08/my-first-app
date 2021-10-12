@@ -35,4 +35,11 @@
 
   <p appBasicHighlight>This is Attribute directive</p>
   <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">This is Attribute directive</p>
+
+  <div [ngSwitch] = "value">
+      <p *ngSwitchCase = "5">value is 5</p>
+      <p *ngSwitchCase = "10">value is 10</p>
+      <p *ngSwitchcase = "100">value is 100</p>
+      <p *ngSwitchDefault>value is unknown</p>
+  </div>
 </div>
