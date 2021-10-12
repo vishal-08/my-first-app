@@ -18,13 +18,19 @@
       </li>
     </div>
 
-    <div *ngIf="!onlyOdd">
+    <!-- <div *ngIf="!onlyOdd">
+      <li class="list-group-item" *ngFor="let even of even" 
+       [ngClass]="{odd : even % 2 !== 0}" [ngStyle] = "{backgroundColor: even % 2 === 0 ? 'aqua' : 'aquamarine'}">
+        {{even}}
+    </li>
+    </div> -->
+
+    <div *appUnless="!onlyOdd">
       <li class="list-group-item" *ngFor="let even of even" 
        [ngClass]="{odd : even % 2 !== 0}" [ngStyle] = "{backgroundColor: even % 2 === 0 ? 'aqua' : 'aquamarine'}">
         {{even}}
     </li>
     </div>
-
   </ul>
 
   <p appBasicHighlight>This is Attribute directive</p>
