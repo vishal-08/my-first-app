@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
-      <a [routerLink] = "['/servers', 6, 'edit']"
+      <!-- <a [routerLink] = "['/servers', server.id, 'edit']" -->
+      <a [routerLink] = "['/servers', server.id]"
           [queryParams] = "{allowedit: '1'}"
           fragment = "loading"
         href="#"
@@ -11,10 +12,6 @@
       </a>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-4">
-    <app-edit-server></app-edit-server>
-    <hr>
-    <app-server></app-server>
-  </div>
+ <router-outlet></router-outlet>
 </div>
 
