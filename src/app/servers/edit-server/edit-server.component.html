@@ -1,27 +1,20 @@
-<div class="card mt-4">
+<h4 *ngIf="!allowEdit">You are not allowed to edit</h4>
+<div *ngIf="allowEdit">
+  <div class="card mt-4"></div>
   <div class="card-header">Edit Server</div>
   <div class="card-body">
     <div class="form-group">
       <label for="name">Server Name</label>
-      <input
-        type="text"
-        id="name"
-        class="form-control mt-1"
-        [(ngModel)]="serverName">
+      <input type="text" id="name" class="form-control mt-1" [(ngModel)]="serverName">
     </div>
     <div class="form-group">
       <label for="status" class="mt-2">Server Status</label>
-      <select
-        id="status"
-        class="form-control mt-1"
-        [(ngModel)]="serverStatus">
+      <select id="status" class="form-control mt-1" [(ngModel)]="serverStatus">
         <option value="online">Online</option>
         <option value="offline">Offline</option>
       </select>
     </div>
-    <button
-      class="btn btn-primary mt-3"
-      (click)="onUpdateServer()">Update Server</button>
-    
+    <button class="btn btn-primary mt-3" (click)="onUpdateServer()">Update Server</button>
+
   </div>
 </div>
