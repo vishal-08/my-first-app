@@ -4,22 +4,38 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { ActiveUsersComponent } from './active-users/active-users.component';
-import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
-import { ManageUserService } from './manage-user.service';
-import { CounterUserService } from './counter-user.service';
+import { HomeComponent } from './home/home.component';
+import { UsersComponent } from './users/users.component';
+import { ServersComponent } from './servers/servers.component';
+import { UserComponent } from './users/user/user.component';
+import { EditServerComponent } from './servers/edit-server/edit-server.component';
+import { ServerComponent } from './servers/server/server.component';
+import { ServersService } from './servers/servers.service';
+import {  RouterModule, Routes } from '@angular/router';
+
+const appRoute : Routes = [
+  { path : '' , component : HomeComponent},
+  { path : 'users' , component : UsersComponent},
+  { path : 'server' , component : ServersComponent}
+]
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ActiveUsersComponent,
-    InactiveUsersComponent
+    HomeComponent,
+    UsersComponent,
+    ServersComponent,
+    UserComponent,
+    EditServerComponent,
+    ServerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(appRoute)
   ],
-  providers: [ManageUserService, CounterUserService],
+  providers: [ServersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
