@@ -1,21 +1,27 @@
-<div class="form-group">
-  <label for="name">Server Name</label>
-  <input
-    type="text"
-    id="name"
-    class="form-control"
-    [(ngModel)]="serverName">
+<div class="card mt-4">
+  <div class="card-header">Edit Server</div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="name">Server Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control mt-1"
+        [(ngModel)]="serverName">
+    </div>
+    <div class="form-group">
+      <label for="status" class="mt-2">Server Status</label>
+      <select
+        id="status"
+        class="form-control mt-1"
+        [(ngModel)]="serverStatus">
+        <option value="online">Online</option>
+        <option value="offline">Offline</option>
+      </select>
+    </div>
+    <button
+      class="btn btn-primary mt-3"
+      (click)="onUpdateServer()">Update Server</button>
+    
+  </div>
 </div>
-<div class="form-group">
-  <label for="status">Server Status</label>
-  <select
-    id="status"
-    class="form-control"
-    [(ngModel)]="serverStatus">
-    <option value="online">Online</option>
-    <option value="offline">Offline</option>
-  </select>
-</div>
-<button
-  class="btn btn-primary"
-  (click)="onUpdateServer()">Update Server</button>

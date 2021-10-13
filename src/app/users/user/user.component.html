@@ -1,4 +1,9 @@
-<p>User with ID {{ user.id }} loaded.</p>
-<p>User name is {{user.name}}</p>
-<hr>
-<a [routerLink] = "['/users', 10, 'Anna']">Load Anna(10)</a>
+<div class="card mt-4 ">
+    <div class="card-header">User Detail</div>
+    <div class="card-body">
+        <p>User with ID {{ user.id }} loaded.</p>
+        <p>User name is {{user.name}}</p>
+        <hr>
+        <a [routerLink]="['/users', 10, 'Anna']">Load Anna(10)</a>
+    </div>
+</div>
