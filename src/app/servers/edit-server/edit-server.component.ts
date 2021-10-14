@@ -17,10 +17,11 @@ export class EditServerComponent implements OnInit {
   constructor(private serversService: ServersService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-
+    console.log(this.route.snapshot.queryParams)
     this.route.queryParams.subscribe(
       (queryParams : Params) =>{
         this.allowEdit = queryParams['allowEdit'] === '1' ? true : false
+        console.log(this.allowEdit)
       }
     )
     this.route.fragment.subscribe()
